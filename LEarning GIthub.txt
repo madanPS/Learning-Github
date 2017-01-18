@@ -1,0 +1,83 @@
+LEarning GIthub
+
+
+	IT IS IN GIT BASH:
+	
+				(# git help)
+				(# git help commit) - describes help
+# to set user-name and email and view changes
+	1. git config --global user.name "(name goes here)" 
+				*global means this user
+	2. git config --global user.email "(ID goes here)" 
+
+	3. git config --list
+				*lists all the changes
+	4. git config user.name
+				*lists only user's name
+
+#navigation
+	1. pwd
+				*currently where git is looking
+	2. cd ~
+				*moves to home directory
+	3. cd ..
+				*moves backwards
+	4. ls
+				*lists folders and files
+	5. cd folder-name
+				*folder where to move
+    6. git init 
+    			*initialize empty git project/repository in the folder
+    7. ls -la
+    			*list empty files as well
+
+#COMMIT 	(commit is to save project at that time, we can come back later at the time we commit)
+	1. git add .
+				*record changes to repository
+				('.' means whole folder)
+	1. git add file-name
+				*the specific file to be added	
+	1. git add "*.txt"	
+				*adds the files with .txt extensions
+	2. git log
+				*shows commits log
+	3. git log --author="mpoudel"
+				*shows commits logs made by author
+	4. git status
+				*sync project with git(untracked(not committed) are shown)
+
+	(after modifying, use add and then commit to save changes to the repository)
+
+#view the changes made
+	1. git diff
+				*compares the changes bewtween repository and staging area i.e after we commit
+	2. git diff --staged
+				*compares the changes between repository and working area i.e. after we add
+
+#delete
+	1. git rm file-name
+				*deletes both in repository and working copy and after that we have to commit as well
+
+#rename and move
+	1.git mv file-name(to b renamed) file-name(renamed into)
+				*mv means move
+	2. git mv file-name(to b moved) folder-name(to be moved into)/file-name(renamed into)
+	e.g: git mv mad.txt Learn/maddy.txt
+
+
+
+#directly adding to repository from working copy(skip staging area)
+	1. git commit -am "message"
+
+#take something from repository and make it a working copy
+	1. git checkout -- file-name
+				* -- used for branches
+
+#unstage files(if u had commit but then don't want to)
+	1. git reset HEAD file-name
+
+
+#connect github and gitbash
+	1. git remote add origin <url>
+	
+	2. git push -u origin master
